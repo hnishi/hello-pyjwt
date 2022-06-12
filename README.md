@@ -11,8 +11,6 @@
 - クライアントは公開鍵を使って署名を検証する
 - プロバイダ側は公開鍵はメタデータ URL から公開してクライアントが検証できるようにすることが多い
 - クライアントは、プログラムで公開鍵を公開 URL から自動で取得可能
--
-Since the public key is usually made available from metadata endpoints, clients can be programmed to retrieve the public key automatically. If this is the case (as it is with the .Net Core libraries), you will have less work to do on configuration (the libraries will fetch the public key from the server). Symmetric keys, on the other hand, need to be exchanged out of band (ensuring a secure communication channel), and manually updated if there is a signing key rollover.
 
 ### HS256
 
@@ -69,4 +67,4 @@ headers without validation: {'typ': 'JWT', 'alg': 'RS256', 'kid': '230498151c214
 
 [sample_rsa.py](./sample_rsa.py)
 
-- [Usage Examples &mdash; PyJWT 2.4.0 documentation](https://pyjwt.readthedocs.io/en/latest/usage.html)
+- ref: [Usage Examples &mdash; PyJWT 2.4.0 documentation](https://pyjwt.readthedocs.io/en/latest/usage.html)
